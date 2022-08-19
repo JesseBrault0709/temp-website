@@ -50,21 +50,9 @@ window.addEventListener('load', () => {
     const setColors = () => {
         const headshotScrollPercentage =
             (window.scrollY + header.scrollHeight) / headshot.scrollHeight
-        if (headshotScrollPercentage <= 1) {
-            const alpha = Math.min(headshotScrollPercentage, 1)
-            header.style.backgroundColor = formatRgba(
-                blackR,
-                blackG,
-                blackB,
-                alpha
-            )
-            header.style.borderBottomColor = formatRgba(
-                grayR,
-                grayG,
-                grayB,
-                alpha
-            )
-        }
+        const alpha = Math.min(headshotScrollPercentage, 1)
+        header.style.backgroundColor = formatRgba(blackR, blackG, blackB, alpha)
+        header.style.borderBottomColor = formatRgba(grayR, grayG, grayB, alpha)
     }
 
     // do initial before we scroll
