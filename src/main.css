@@ -1,0 +1,150 @@
+:root {
+    --black: #0a0605;
+    --white: #fbf9f7;
+    --gray: #626262;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+    font-size: 22px;
+    color: var(--white);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--black);
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: start;
+}
+
+body > * {
+    min-width: 0px;
+}
+
+header {
+    grid-column: 1;
+    grid-row: 1;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    width: 100%;
+
+    border-bottom: 1px solid;
+    border-bottom-color: var(--gray);
+}
+
+#header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+#header-left > h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+#header-left > h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.625rem;
+    margin: 0;
+}
+
+#menu-icon {
+    font-size: 1rem;
+}
+
+main {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+#headshot {
+    width: 100%;
+}
+
+article {
+    padding: 20px;
+    text-align: justify;
+}
+
+p {
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    max-width: 75ch;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 20px;
+    }
+    #header-left > h1 {
+        font-size: 2rem;
+    }
+    #header-left > h2 {
+        font-size: 1.25rem;
+    }
+    #menu-icon {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 390px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #conductor-and-composer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
