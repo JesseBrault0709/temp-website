@@ -102,6 +102,10 @@ a {
     color: var(--white);
 }
 
+a:visited {
+    color: var(--gray);
+}
+
 footer {
     width: 100%;
     text-align: center;
